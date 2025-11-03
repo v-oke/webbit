@@ -1,0 +1,22 @@
+<div id="<%= dom_id submission %>" class="w-full sm:w-auto my-5 space-y-5">
+  <div>
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= submission.title %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Body:</strong>
+    <%= submission.body %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Url:</strong>
+    <%= submission.url %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Media:</strong>
+    <%= link_to submission.media.filename, submission.media, class: "text-gray-700 underline hover:no-underline" if submission.media.attached? %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= submission.user_id %>
+  </div>
+</div>
